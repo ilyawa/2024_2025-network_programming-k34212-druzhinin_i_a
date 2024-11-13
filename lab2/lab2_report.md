@@ -12,7 +12,7 @@ Date of finished: 13.11.2023
 
 ## Описание
 
-В данной лабораторной работе вы на практике ознакомитесь с системой управления конфигурацией Ansible, использующаяся для автоматизации настройки и развертывания программного обеспечения. 
+В данной лабораторной работе вы на практике ознакомитесь с системой управления конфигурацией Ansible, использующейся для автоматизации настройки и развертывания программного обеспечения. 
 
 ## Цель работы
 
@@ -67,7 +67,7 @@ Date of finished: 13.11.2023
 <img width="603" alt="Screen Shot 2024-11-12 at 22 15 30" src="https://github.com/user-attachments/assets/4ae4e038-ba26-4d08-ab4d-6de896c9eee4">
 <br></br>
 
-Проверим пинг в ansible.
+Проверим пинг в в ansible.
 
 <img width="603" alt="Screen Shot 2024-11-12 at 22 16 05" src="https://github.com/user-attachments/assets/c1abf7a4-0927-47de-9eb7-4d56ca0b8299">
 <br></br>
@@ -102,7 +102,7 @@ Date of finished: 13.11.2023
 <img width="681" alt="Screen Shot 2024-11-12 at 23 07 33" src="https://github.com/user-attachments/assets/9d123f19-4065-4bdf-a091-58cefe26bcba">
 <br></br>
 
-Как можно видеть, playbook отработал. Конфигурации были вывдены в консоль.
+Как можно видеть, playbook отработал. Конфигурации были выведены в консоль.
 
 <img width="733" alt="Screen Shot 2024-11-13 at 10 18 49" src="https://github.com/user-attachments/assets/69b68f4c-3bbf-49d2-93ef-98c19e6d4a4b">
 <img width="732" alt="Screen Shot 2024-11-13 at 10 19 43" src="https://github.com/user-attachments/assets/8f50cde0-88b8-43b5-ab63-7fe2b4e6a402">
