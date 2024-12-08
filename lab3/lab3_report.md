@@ -85,7 +85,15 @@ Netbox был поднят и схема сети приобрела следу�
 
 <img width="800" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab3/images/Screen%20Shot%202024-12-05%20at%2019.01.30.png">
 
+Выполним данный playbook.
+
+<img width="800" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab3/images/Screen%20Shot%202024-12-05%20at%2019.01.30.png">
+
 Затем напишем сценарий, который внесет серийный номер устройств CHR в Netbox.  
+
+<img width="800" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab3/images/Screen%20Shot%202024-12-05%20at%2019.01.30.png">
+
+Выполним сценарий.
 
 <img width="800" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab3/images/Screen%20Shot%202024-12-05%20at%2019.01.30.png">
 
