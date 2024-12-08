@@ -30,18 +30,20 @@ Date of finished: 8.12.2023
 
 Netbox - это открытое веб-приложение, разработанное для управления и документирования компьютерных сетей.   
 Поднимем Netbox в докере с помощью готового образа netbox:latest. Файл docker-compose будет выглядеть следующим образом.
-Помимо контейнера с Netbox поднимем СУБД PostgreSQL и нереляционную СУБД Redis для правильной работы Netbox.  
+Помимо контейнера с Netbox поднимем СУБД PostgreSQL и нереляционную СУБД Redis для корректной работы Netbox.  
 
 <img width="600" alt="Screen Shot 2024-10-16 at 13 13 09" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab3/images/Screen%20Shot%202024-12-01%20at%2017.05.24.png">  
 <br></br>
 При сборке контейнера получаем ошибку со следующим стек трейсом.  
 
-<img width="600" alt="Screen Shot 2024-10-16 at 13 13 09" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab3/images/Screen%20Shot%202024-12-01%20at%2017.05.24.png">  
+<img width="600" alt="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab3/images/Screen%20Shot%202024-12-08%20at%2006.56.13.png">  
 <br></br>
 
-В интернете было найдено решение данной проблемы, файл docker-compose был изменен.  
+В интернете было найдено решение данной проблемы, в файл docker-compose был добавлен секретный ключ.  
 
-<img width="600" alt="Screen Shot 2024-10-16 at 13 13 09" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab3/images/Screen%20Shot%202024-12-01%20at%2017.05.24.png">  
+<img width="600" alt="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab3/images/Screen%20Shot%202024-12-01%20at%2021.07.26.png">  
+<br></br>
+<img width="600" alt="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab3/images/Screen%20Shot%202024-12-01%20at%2021.07.18.png">  
 <br></br>
 
 Netbox был поднят и схема сети приобрела следующий вид.  
