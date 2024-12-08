@@ -29,16 +29,17 @@ Date of finished: 8.12.2023
 ## Ход работы
 
 Netbox - это открытое веб-приложение, разработанное для управления и документирования компьютерных сетей.   
+
 Поднимем Netbox в докере с помощью готового образа netbox:latest. Файл docker-compose будет выглядеть следующим образом.
 Помимо контейнера с Netbox поднимем СУБД PostgreSQL и нереляционную СУБД Redis для корректной работы Netbox.  
 
 <img width="600" alt="Screen Shot 2024-10-16 at 13 13 09" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab3/images/Screen%20Shot%202024-12-01%20at%2017.05.24.png">  
 
-При сборке контейнера получаем ошибку со следующим стек трейсом.  
+При сборке контейнера получаем ошибку со следующим стек-трейсом.  
 
 <img width="800" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab3/images/Screen%20Shot%202024-12-08%20at%2006.56.13.png">  
 
-В интернете было найдено решение данной проблемы, в файл docker-compose был добавлен секретный ключ.  
+В интернете было найдено решение данной проблемы - в файл docker-compose был добавлен секретный ключ.  
 
 <img width="800" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab3/images/Screen%20Shot%202024-12-01%20at%2021.07.26.png">  
 <img width="800" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab3/images/Screen%20Shot%202024-12-01%20at%2021.07.18.png">  
@@ -56,6 +57,10 @@ Netbox был поднят и схема сети приобрела следу�
 <img width="700" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab3/images/Screen%20Shot%202024-12-05%20at%2018.38.46.png">
 <img width="700" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab3/images/Screen%20Shot%202024-12-05%20at%2018.38.59.png">
 
+Список устройств в Netbox.  
+
+<img width="700" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab3/images/Screen%20Shot%202024-12-07%20at%2005.41.04.png">
+
 Создадим токен для того, чтобы работать с Netbox с помощью API.  
 
 <img width="700" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab3/images/Screen%20Shot%202024-12-05%20at%2018.39.54.png">
@@ -68,11 +73,21 @@ Netbox был поднят и схема сети приобрела следу�
 
 <img width="800" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab3/images/Screen%20Shot%202024-12-05%20at%2018.59.16.png">
 
+Выведем список устройств с помощью команды ```ansible-inventory --list```  
+
+<img width="800" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab3/images/Screen%20Shot%202024-12-05%20at%2019.01.47.png">
+
 Получим все данные об устройствах из Netbox в виде yaml файла (файл прикреплен в папке работы).  
 
 <img width="800" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab3/images/Screen%20Shot%202024-12-05%20at%2019.01.30.png">
 
+Напишем сценарий Ansible, который изменит имена и IP-адреса устройств CHR-1 и CHR-2, используя информацию из Netbox.  
 
+<img width="800" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab3/images/Screen%20Shot%202024-12-05%20at%2019.01.30.png">
+
+Затем напишем сценарий, который внесет серийный номер устройств CHR в Netbox.  
+
+<img width="800" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab3/images/Screen%20Shot%202024-12-05%20at%2019.01.30.png">
 
 ## Вывод
 В ходе выполнения данной лабораторной работы с помощью Ansible и Netbox была собрана вся информация о сетевых устройствах, информация была сохранена в отдельном файле, также на основе информации из Netbox и с помощью Ansible были изменены имена и IP адреса устройств, был написан сценарий, позволяющий собрать серийный номер устройства и вносящий серийный номер в Netbox.
