@@ -6,7 +6,7 @@ Group: K34212
 Author: Druzhinin Ilya Antonovich  
 Lab: Lab 3  
 Date of create: 1.12.2023  
-Date of finished: 6.12.2023  
+Date of finished: 8.12.2023  
 
 ## Лабораторная работа №3 "Развертывание Netbox, сеть связи как источник правды в системе технического учета Netbox"
 
