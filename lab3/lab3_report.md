@@ -83,19 +83,19 @@ Netbox был поднят и схема сети приобрела следу�
 
 Напишем сценарий Ansible, который изменит имена и IP-адреса устройств CHR-1 и CHR-2, используя информацию из Netbox.  
 
-<img width="800" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab3/images/Screen%20Shot%202024-12-05%20at%2019.01.30.png">
+<img width="800" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab3/images/Screen%20Shot%202024-12-09%20at%2001.04.46.png">
 
-Выполним данный playbook.
+Выполним данный playbook.  
 
-<img width="800" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab3/images/Screen%20Shot%202024-12-05%20at%2019.01.30.png">
+<img width="800" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab3/images/Screen%20Shot%202024-12-09%20at%2001.27.27.png">
 
 Затем напишем сценарий, который внесет серийный номер устройств CHR в Netbox.  
 
-<img width="800" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab3/images/Screen%20Shot%202024-12-05%20at%2019.01.30.png">
+<img width="800" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab3/images/Screen%20Shot%202024-12-09%20at%2001.12.41.png">
 
-Выполним сценарий.
+Выполним сценарий.  
 
-<img width="800" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab3/images/Screen%20Shot%202024-12-05%20at%2019.01.30.png">
+<img width="800" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab3/images/Screen%20Shot%202024-12-09%20at%2001.53.25.png">
 
 ## Вывод
 В ходе выполнения данной лабораторной работы с помощью Ansible и Netbox была собрана вся информация о сетевых устройствах, информация была сохранена в отдельном файле, также на основе информации из Netbox и с помощью Ansible были изменены имена и IP адреса устройств, был написан сценарий, позволяющий собрать серийный номер устройства и вносящий серийный номер в Netbox.
