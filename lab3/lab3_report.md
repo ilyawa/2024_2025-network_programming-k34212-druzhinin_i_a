@@ -34,16 +34,25 @@ Netbox - это открытое веб-приложение, разработа
 
 <img width="600" alt="Screen Shot 2024-10-16 at 13 13 09" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab3/images/Screen%20Shot%202024-12-01%20at%2017.05.24.png">  
 <br></br>
-
 При сборке контейнера получаем ошибку со следующим стек трейсом.  
 
-После поиска в интернете было найдено решение и файл docker-compose был изменен.  
+<img width="600" alt="Screen Shot 2024-10-16 at 13 13 09" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab3/images/Screen%20Shot%202024-12-01%20at%2017.05.24.png">  
+<br></br>
 
-Netbox был поднят на одной вм с Ansible для того, чтобы они находились в одной локальной подсети и между ними была связь.  
+В интернете было найдено решение данной проблемы, файл docker-compose был изменен.  
+
+<img width="600" alt="Screen Shot 2024-10-16 at 13 13 09" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab3/images/Screen%20Shot%202024-12-01%20at%2017.05.24.png">  
+<br></br>
+
+Netbox был поднят и схема сети приобрела следующий вид.  
+
+<img width="600" alt="Screen Shot 2024-10-16 at 13 13 09" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab3/images/Screen%20Shot%202024-12-01%20at%2017.05.24.png">  
+<br></br>
 
 Заполняем в Netbox информацию о сетевых устройствах: тип, вендор, модель, имя, интерфейсы и их IP-адреса.  
 
-
+<img width="600" alt="Screen Shot 2024-10-16 at 13 13 09" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab3/images/Screen%20Shot%202024-12-01%20at%2017.05.24.png">  
+<br></br>
 
 ## Вывод
 В ходе выполнения данной лабораторной работы с помощью Ansible и Netbox была собрана вся информация о сетевых устройствах, информация была сохранена в отдельном файле, также на основе информации из Netbox и с помощью Ansible были изменены имена и IP адреса устройств, был написан сценарий, позволяющий собрать серийный номер устройства и вносящий серийный номер в Netbox.
