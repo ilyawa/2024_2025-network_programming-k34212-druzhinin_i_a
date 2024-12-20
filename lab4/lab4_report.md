@@ -58,8 +58,8 @@ Date of finished: 20.12.2023
 
 Затем проверим работу туннелирования, как можно видеть, у отправленного пакета есть заголовок [My_Tunnel].  
 
-<img width="800" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab4/images/Screen%20Shot%202024-12-20%20at%2017.10.36.png">  
-<img width="800" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab4/images/Screen%20Shot%202024-12-20%20at%2017.10.06.png">  
+<img width="500" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab4/images/Screen%20Shot%202024-12-20%20at%2017.10.36.png">  
+<img width="500" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab4/images/Screen%20Shot%202024-12-20%20at%2017.10.06.png">  
 
 ## Вывод
 В ходе выполнения данной лабораторной работы был изучен синтаксис языка программирования P4 и выполнены 2 обучающих задания от Open network foundation для ознакомления на практике с P4.
