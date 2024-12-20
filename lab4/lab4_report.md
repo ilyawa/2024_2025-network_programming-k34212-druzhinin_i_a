@@ -26,21 +26,40 @@ Date of finished: 20.12.2023
 
 ## Ход работы
 
-Netbox - это открытое веб-приложение, разработанное для управления и документирования компьютерных сетей.   
+Поднимем вм из .ova файла, скачанного с веб сайта https://p4.org/p4_events/p4-developer-day-2/.  
 
-Поднимем Netbox в докере с помощью готового образа netbox:latest. Файл docker-compose будет выглядеть следующим образом.
-Помимо контейнера с Netbox поднимем СУБД PostgreSQL и нереляционную СУБД Redis для корректной работы Netbox.  
+<img width="400" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab4/images/Screen%20Shot%202024-12-20%20at%2007.35.54.png">  
+<img width="800" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab4/images/Screen%20Shot%202024-12-20%20at%2007.36.13.png">  
 
-<img width="600" alt="Screen Shot 2024-10-16 at 13 13 09" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab3/images/Screen%20Shot%202024-12-01%20at%2017.05.24.png">  
+С помощью команды ```make run``` поднимем виртуальную сеть mininet и убедимся, что пинги между устройствами не идут.  
 
-При сборке контейнера получаем ошибку со следующим стек-трейсом.  
+<img width="800" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab4/images/Screen%20Shot%202024-12-20%20at%2008.16.08.png">  
+<img width="800" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab4/images/Screen%20Shot%202024-12-20%20at%2008.23.49.png">  
 
-<img width="800" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab3/images/Screen%20Shot%202024-12-08%20at%2006.56.13.png">  
+С помощью информации с официального гитхаба P4 реализуем в файле basic.p4 базовую коммутацию пакетов.  
 
-В интернете было найдено решение данной проблемы - в файл docker-compose был добавлен секретный ключ.  
+<img width="800" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab4/images/Screen%20Shot%202024-12-20%20at%2011.38.20.png">  
+<img width="800" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab4/images/Screen%20Shot%202024-12-20%20at%2011.47.44.png">  
+<img width="800" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab4/images/Screen%20Shot%202024-12-20%20at%2011.59.33.png">  
 
-<img width="800" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab3/images/Screen%20Shot%202024-12-01%20at%2021.07.26.png">  
-<img width="800" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab3/images/Screen%20Shot%202024-12-01%20at%2021.07.18.png">  
+Пересоберем mininet и убедимся, что пинги между устройствами идут.  
+
+<img width="800" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab4/images/Screen%20Shot%202024-12-20%20at%2012.20.50.png">   
+
+Далее реализуем туннелирование, для этого изменим файл basic_tunneling.p4.  
+
+<img width="800" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab4/images/Screen%20Shot%202024-12-20%20at%2013.16.13.png">  
+<img width="800" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab4/images/Screen%20Shot%202024-12-20%20at%2013.17.59.png">  
+<img width="800" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab4/images/Screen%20Shot%202024-12-20%20at%2013.59.39.png">
+
+С помощью скриптов send.py и receive.py проверим отправку и получение пакетов.  
+
+<img width="800" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab4/images/Screen%20Shot%202024-12-20%20at%2014.46.23.png">  
+
+Затем проверим работу туннелирования, как можно видеть, у отправленного пакета есть заголовок [My_Tunnel].  
+
+<img width="800" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab4/images/Screen%20Shot%202024-12-20%20at%2017.10.36.png">  
+<img width="800" src="https://github.com/ilyawa/2024_2025-network_programming-k34212-druzhinin_i_a/blob/main/lab4/images/Screen%20Shot%202024-12-20%20at%2017.10.06.png">  
 
 ## Вывод
 В ходе выполнения данной лабораторной работы был изучен синтаксис языка программирования P4 и выполнены 2 обучающих задания от Open network foundation для ознакомления на практике с P4.
